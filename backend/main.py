@@ -11,6 +11,9 @@ from fastapi import BackgroundTasks
 # Para hacer búsquedas web
 from fastapi import Depends
 
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
+
+
 # IMPORTANTE: Aquí vamos a simular la función web() que usarías con el plugin oficial OpenAI, 
 # pero acá solo te pongo un stub que podés adaptar después al plugin real o alguna API de búsqueda.
 
